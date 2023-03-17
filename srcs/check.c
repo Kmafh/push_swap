@@ -6,7 +6,7 @@
 /*   By: kama <kama@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 09:51:15 by kama              #+#    #+#             */
-/*   Updated: 2023/03/17 05:52:23 by kama             ###   ########.fr       */
+/*   Updated: 2023/03/17 06:31:40 by kama             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	check_dup(char **av)
 			else if (ft_strcmp(dup, av[j]) == 0)
 			{
 				ft_free_arg(&dup);
-				ft_exit_ps("Error - duplicated values.\n", 1);
+				ft_exit_ps("Error\n", 1);
 			}
 			else
 				j++;
@@ -87,18 +87,18 @@ int	check_numbers(char **av)
 
 	i = -1;
 	if (!av[0])
-		ft_exit_ps("Error - no int found in args.\n", 1);
+		ft_exit_ps("Error\n", 1);
 	while (av[++i])
 	{
 		j = -1;
 		if (check_overflow(av[i]) == 0)
-			ft_exit_ps("Error - Int Overflow.\n", 1);
+			ft_exit_ps("Error\n", 1);
 		while (av[i][++j])
 		{
 			if (ft_isalpha(av[i][j]) == 1 || av[i][j] == '.'
 			|| ((av[i][j]) == '-' && (av[i][j +1]) == '\0')
 			|| ((av[i][j]) == '+' && (av[i][j +1]) == '\0'))
-				ft_exit_ps("Error - Not valid input in arg.\n", 1);
+				ft_exit_ps("Error\n", 1);
 		}
 	}
 	return (1);

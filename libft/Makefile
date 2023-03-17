@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: kama <kama@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/16 12:18:16 by hbuisser          #+#    #+#              #
-#    Updated: 2021/06/03 08:08:44 by vminomiy         ###   ########.fr        #
+#    Updated: 2023/03/17 10:46:50 by kama             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,13 @@ $(NAME): $(OBJECTS)
 	ranlib $(NAME)
 
 $(OBJECTS): $(SRCS)
-	$(CC) $(CFLAGS) -c $(SRCS)
+	@$(CC) $(CFLAGS) -c $(SRCS)
 
 clean:
 	$(REM) $(OBJECTS)
 
 fclean: clean
-	$(REM) $(NAME)
+	@$(REM) $(NAME)
 
 re: fclean all
 

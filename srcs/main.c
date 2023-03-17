@@ -6,7 +6,7 @@
 /*   By: kama <kama@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 09:51:15 by kama              #+#    #+#             */
-/*   Updated: 2023/03/17 05:58:52 by kama             ###   ########.fr       */
+/*   Updated: 2023/03/17 06:29:09 by kama             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ int	main(int ac, char **av)
 
 	v = NULL;
 	if (ac < 2)
-		ft_exit_ps("Wrong number of arguments", 1);
+		ft_exit_ps("Error\n", 1);
 	else
 	{
 		v = ft_init_var(v);

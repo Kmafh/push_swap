@@ -6,7 +6,7 @@
 #    By: kama <kama@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 0023/01/26 09:51:15 by ama               #+#    #+#              #
-#    Updated: 2023/03/17 06:00:36 by kama             ###   ########.fr        #
+#    Updated: 2023/03/17 11:10:57 by kama             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,15 +48,12 @@ PS_FILES	=	main.c			\
 				op_r.c			\
 				op_s.c
 
-# C_FILES		=	c_srcs/c_main.c	
 
 PS_SRCS		=	$(addprefix $(DIR), $(PS_FILES))
-# C_SRCS		=	$(addprefix $(DIR), $(C_FILES))
 PS_OBJ		=	$(PS_SRCS:$(DIR)%.c=$(OBJ_DIR)%.o)
-# C_OBJ		=	$(C_SRCS:$(DIR)%.c=$(OBJ_DIR)%.o)
 
 all			:	$(PS_NAME)	
-# $(C_NAME) 
+
 
 obj/%.o		:	srcs/%.c
 				@mkdir -p $(OBJ_DIR) $(SUB_DIR)
